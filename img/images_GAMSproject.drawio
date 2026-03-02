@@ -85,7 +85,7 @@
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-20" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="Artifact" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-20" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="Item" vertex="1">
           <mxGeometry height="210" width="180" x="624" y="410" as="geometry" />
         </mxCell>
         <mxCell id="E-xJeiTM2agwuG8JPDF6-21" parent="E-xJeiTM2agwuG8JPDF6-20" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
@@ -96,7 +96,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-23" parent="E-xJeiTM2agwuG8JPDF6-21" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="artifact_id" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-23" parent="E-xJeiTM2agwuG8JPDF6-21" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="item_id" vertex="1">
           <mxGeometry height="30" width="150" x="30" as="geometry">
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
@@ -166,7 +166,7 @@
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-39" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="Quest" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-39" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="Contract" vertex="1">
           <mxGeometry height="300" width="180" x="624" y="70" as="geometry" />
         </mxCell>
         <mxCell id="E-xJeiTM2agwuG8JPDF6-40" parent="E-xJeiTM2agwuG8JPDF6-39" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
@@ -323,7 +323,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-76" parent="E-xJeiTM2agwuG8JPDF6-74" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="artifact_id" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-76" parent="E-xJeiTM2agwuG8JPDF6-74" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="item_id" vertex="1">
           <mxGeometry height="30" width="150" x="30" as="geometry">
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
@@ -354,7 +354,7 @@
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-83" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="&lt;div&gt;QuestAcceptance&lt;/div&gt;" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-83" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="&lt;div&gt;ContractAcceptance&lt;/div&gt;" vertex="1">
           <mxGeometry height="180" width="180" x="374" y="70" as="geometry" />
         </mxCell>
         <mxCell id="E-xJeiTM2agwuG8JPDF6-84" parent="E-xJeiTM2agwuG8JPDF6-83" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
@@ -516,7 +516,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-121" parent="E-xJeiTM2agwuG8JPDF6-119" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="name (Artifact or Quest)" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-121" parent="E-xJeiTM2agwuG8JPDF6-119" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="name (Item or Contract)" vertex="1">
           <mxGeometry height="30" width="150" x="30" as="geometry">
             <mxRectangle height="30" width="150" as="alternateBounds" />
           </mxGeometry>
@@ -628,7 +628,7 @@
             <mxPoint x="334" y="745" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-146" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" value="class: Artifact" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-146" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" value="class: Item" vertex="1">
           <mxGeometry height="192" width="160" x="70" y="1284" as="geometry">
             <mxRectangle height="50" width="80" x="100" y="930" as="alternateBounds" />
           </mxGeometry>
@@ -636,7 +636,7 @@
         <mxCell id="E-xJeiTM2agwuG8JPDF6-147" parent="E-xJeiTM2agwuG8JPDF6-146" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="&lt;b&gt;Attribute&lt;/b&gt;&lt;br&gt;- name: String&lt;div&gt;- description: String&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- stock_qty: Number&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- created_at: Date&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- updated_at: Date&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Methods:&lt;/b&gt;&lt;br&gt;&amp;nbsp;- isAvailable()&lt;/div&gt;" vertex="1">
           <mxGeometry height="142" width="160" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-148" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="object: newArtifact" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-148" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="object: newItem" vertex="1">
           <mxGeometry height="198" width="320" x="300" y="1120" as="geometry">
             <mxRectangle height="50" width="80" x="100" y="930" as="alternateBounds" />
           </mxGeometry>
@@ -644,7 +644,7 @@
         <mxCell id="E-xJeiTM2agwuG8JPDF6-149" parent="E-xJeiTM2agwuG8JPDF6-148" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="&lt;b&gt;Attribute&lt;/b&gt;&lt;br&gt;- name:&amp;nbsp;&quot;Ancient Sword&quot;,&lt;div&gt;- description:&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;&quot;A rare blade used by guild champions.&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- stoke_qty: 3,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- created_at:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot;2022-03-25&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- updated_at:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&quot;2022-03-26&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Methods:&lt;/b&gt;&lt;br&gt;&amp;nbsp;- isAvailable()&lt;/div&gt;" vertex="1">
           <mxGeometry height="148" width="320" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-150" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="object: updatedArtifact" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-150" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="object: updatedItem" vertex="1">
           <mxGeometry height="206" width="320" x="300" y="1364" as="geometry">
             <mxRectangle height="50" width="80" x="100" y="930" as="alternateBounds" />
           </mxGeometry>
@@ -691,13 +691,13 @@
             <mxPoint x="480" y="1742.16" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-168" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#f0c518, #281d00);strokeColor=#d6b656;" value="1. User clicks&amp;nbsp;&lt;div&gt;&quot;Reserve&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;2. React sends POST /artifacts/:id/reserve&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-168" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#f0c518, #281d00);strokeColor=#d6b656;" value="1. User clicks&amp;nbsp;&lt;div&gt;&quot;Reserve&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;2. React sends POST /items/:id/reserve&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="117" width="181" x="70" y="1813" as="geometry" />
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-169" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#00a1d6, #1d293b);strokeColor=#6c8ebf;" value="&lt;div&gt;3. Express Controller `reserveArtifact`&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;4. It loads the Artifact object and calls `&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;artifact.isAvailable()`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-169" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#00a1d6, #1d293b);strokeColor=#6c8ebf;" value="&lt;div&gt;3. Express Controller `reserveItem`&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;4. It loads the Item object and calls `&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;item.isAvailable()`&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="117" width="181" x="296" y="1813" as="geometry" />
         </mxCell>
-        <mxCell id="E-xJeiTM2agwuG8JPDF6-170" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#40ba52, #1f2f1e);strokeColor=#82b366;" value="&lt;div&gt;5. The Artifact object checks its own state `stock_qty`&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;6. If true → update stock and save&lt;/div&gt;&lt;div&gt;If false → return error&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="E-xJeiTM2agwuG8JPDF6-170" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#40ba52, #1f2f1e);strokeColor=#82b366;" value="&lt;div&gt;5. The Item object checks its own state `stock_qty`&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;6. If true → update stock and save&lt;/div&gt;&lt;div&gt;If false → return error&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="117" width="181" x="524" y="1813" as="geometry" />
         </mxCell>
         <mxCell id="E-xJeiTM2agwuG8JPDF6-175" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
