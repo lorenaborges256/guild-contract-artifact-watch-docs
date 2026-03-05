@@ -106,6 +106,83 @@ _Fig 4. MVC Applied in GAMS project Diagram, Image created by the team using dra
 
 ## 4. Client/server explanation
 
+The Guild Availability Management System (GAMS) follows a client–server architecture implemented using the MERN stack (MongoDB, Express, React, Node.js). This architecture separates responsibilities between the frontend and backend to improve maintainability, scalability, and security.
+In this model, the React application acts as the client. It runs in the user’s browser and is responsible for rendering the user interface, handling user interactions, and sending HTTP requests to the backend API.
+The Express application acts as the server. It receives incoming requests, applies business logic, validates data, enforces authorisation rules, and communicates with MongoDB through Mongoose models.
+MongoDB serves as the persistent data layer. It stores core entities such as Users, Items, Contracts, Reservations, Watchlists, and Notifications. All permanent system data is managed centrally through the backend, ensuring data integrity and preventing direct client access to the database.
+This separation ensures that the frontend focuses on presentation and usability, while the backend controls system rules and data management.
+
+## 4.1 Client/Server Communication
+
+(image)
+Communication between the client and server follows a RESTful request–response model over HTTP.
+The React frontend sends HTTP requests (GET, POST, PUT, DELETE) to API endpoints defined in the Express backend.
+Each request follows this process:
+
+1. The client sends an HTTP request to a specific endpoint.
+2. The Express router maps the request to the appropriate controller.
+3. The controller applies business logic.
+4. The controller interacts with the relevant Mongoose model.
+5. The model performs database operations in MongoDB.
+6. The server returns a structured JSON response.
+7. The client updates the interface based on the response.
+   
+Because this architecture is stateless, each request contains all the information required to process it. It reduces the server's reliance on session state and supports scalability.
+
+## 4.2 Data Distribution
+
+(image)
+GAMS centralises all persistent data within MongoDB, which acts as the single source of truth.
+The client does not store authoritative system data. Instead, it retrieves data from the backend when needed and updates information only through API requests.
+The server manages all database interactions and determines what data can be accessed or modified. Core entities such as Users, Items, Contracts, Reservations, Watchlists, and Notifications are stored in MongoDB and accessed exclusively through the backend.
+This approach ensures consistency, prevents client-side manipulation of sensitive information, and maintains overall system integrity.
+
+## 4.3 Feature Distribution
+
+The system distributes features according to responsibility.
+The React frontend handles presentation and user interaction. It renders pages such as the item list, item details, contract views, watchlists, notifications, and administrative dashboards. It captures user actions, including reserving an item, accepting a contract, updating stock (admin), or managing watch preferences.
+The Express backend enforces business rules and system logic. It processes requests, checks item availability, updates stock quantities, validates contract conditions, generates notifications, and controls access based on user roles.
+By keeping decision-making logic on the server, the system prevents users from bypassing rules through client-side manipulation.
+
+## 4.4 Authorisation
+
+(image)
+GAMS uses role-based authorisation to control access to sensitive features.
+After authentication, the backend identifies the user and assigns permissions based on their role (for example, regular user or admin).
+Regular users can:
+
+1. Browse items and contracts.
+2. Reserve available items.
+3. Accept contracts within defined conditions.
+4. Manage their own watchlist and notifications.
+
+Admin users have additional permissions. They can:
+
+1. Create and edit items and contracts.
+2. Update stock quantities.
+3. Manage availability settings.
+4. Perform administrative management actions.
+The backend enforces these permissions on protected routes. Even if the frontend hides certain interface elements, the server performs the final authorisation check before executing any restricted operation.
+
+## 4.5 Validation
+
+Validation ensures that incoming data meets system requirements before being processed or stored.
+
+### Client-side validation (React)
+
+The React frontend performs basic validation to improve usability. It includes checking required fields, validating simple formats (such as email addresses), and preventing clearly invalid input (such as negative numbers in stock fields).
+However, client-side validation is not sufficient for security because users can bypass the interface.
+
+### Server-side validation (Express + Mongoose)
+
+The backend performs final validation before updating the database. The server verifies that:
+1. Required fields are present
+2. Data types are correct
+3. Values comply with business rules (for example, stock_qty cannot be negative)
+4. The target record exists.
+Mongoose schema definitions provide additional validation at the model level to maintain data consistency.
+If validation fails, the server returns an appropriate error response and does not modify the database. If validation succeeds, the server completes the request and returns a success response to the client.
+
 ## 5. ERD explanation
 
 The Entity Relationship Diagram (ERD) models the core data structures and interactions within the Guild Contract & Item Watch System, capturing how users engage with items, contracts, reservations, and notifications. It separates the two availability, behaviours—inventory‑based items and time‑window‑based contracts—into distinct entities, each with their own attributes and relational rules. Supporting entities such as Reservation, ContractAcceptance, Watchlist, and Notification represent user actions and system‑generated events, ensuring that every interaction is stored in a structured and traceable way.
