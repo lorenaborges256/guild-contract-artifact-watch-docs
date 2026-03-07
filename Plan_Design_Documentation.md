@@ -1,4 +1,3 @@
-
 # Planning & Design Documentation
 
 ## DEV1003 - Advanced Applications - Assessment 1
@@ -18,7 +17,7 @@ Throughout development, the system adheres to ethical principles, prioritising u
 
 ### 2.1 Programming paradigm: Object‑Oriented Programming (OOP)
 
-The Object‑Oriented Programming (OOP) paradigm appears naturally in this project through the way Mongoose structures and manages data. In OOP, a _class_ defines what an object should look like, and each _object instance_ represents a real, individual item with its own data and behaviour. Mongoose follows this same pattern.  
+The Object‑Oriented Programming (OOP) paradigm appears naturally in this project through the way Mongoose structures and manages data. In OOP, a _class_ defines what an object should look like, and each _object instance_ represents a real, individual item with its own data and behaviour. Mongoose follows this same pattern.
 
 When we define an `Item` schema with fields such as `name`, `description`, `stock_qty`, `created_at`, and `updated_at`, we are creating a blueprint that describes the state of every Item object in the system. Compiling this schema into a Mongoose model is similar to defining a class in traditional OOP: the model becomes the constructor used to create new Item objects. This reflects core OOP principles: encapsulation, where data and behaviour are grouped together inside the same object, and responsibility boundaries, where each Item object manages its own rules rather than relying on external code.
 
@@ -26,14 +25,15 @@ When we define an `Item` schema with fields such as `name`, `description`, `stoc
 
 ```javascript
 const item = {
-  name: "Ancient Sword",
-  description: "A rare blade used by guild champions.",
+  name: 'Ancient Sword',
+  description: 'A rare blade used by guild champions.',
   stock_qty: 3,
   isAvailable() {
     return this.stock_qty > 0;
-  }
+  },
 };
 ```
+
 This example demonstrates the core OOP idea of encapsulation: the object stores its own data (state) and the function that operates on that data (behaviour).
 
 #### Example 2 - Mongoose Model With a Simple Method (Real MERN OOP)
@@ -44,7 +44,7 @@ const itemSchema = new mongoose.Schema({
   description: String,
   stock_qty: Number,
   created_at: Date,
-  updated_at: Date
+  updated_at: Date,
 });
 
 itemSchema.methods.isAvailable = function () {
@@ -58,7 +58,7 @@ Here, the model acts like a class, and each document created from it becomes an 
 
 ```javascript
 if (!item.isAvailable()) {
-  return res.status(400).json({ message: "Item not available" });
+  return res.status(400).json({ message: 'Item not available' });
 }
 ```
 
@@ -72,7 +72,8 @@ _Fig 1. Example Object‑Oriented Programming Diagram for an Item entity, Image 
 
 ### 2.2 Software architecture pattern: Model–View–Controller (MVC)
 
-The application follows a Model–View–Controller (MVC)‑inspired architecture layered over a MERN stack.  
+The application follows a Model–View–Controller (MVC)‑inspired architecture layered over a MERN stack.
+
 <center><img src=".\img\mvc-1.png" width="45%" alt="Model–View–Controller Diagram">  </center>
 
 _Fig 2. Generic Model–View–Controller Diagram, Image from Ed Lessons website_
@@ -121,6 +122,36 @@ The team used GitHub for version control and collaborative development. We also 
 The team communicated and coordinated project work through Discord. We used messaging channels and voice meetings to discuss development progress, ask questions, and share updates. Team members frequently posted progress updates on Discord to report completed tasks and coordinate the project's next steps.
 
 This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
+### 3.1 Project management methodology: Agile
+
+### 3.2 Task management methodology: Kanban
+
+For task management, the team will use the Kanban methodology to organise and track project tasks throughout the development of the Guild Availability Management System. Kanban focuses on visualising work and moving tasks through different stages of completion using a board and task cards. This approach allows the team to clearly see what work needs to be completed, what is currently in progress, and what tasks have already been finished.
+
+A Trello board will be used to implement the Kanban workflow. The board will be divided into four columns representing the different stages of work:
+
+![Kanban Workflow](img/KanbanFlow.png)
+
+_Fig 5. Kanban task workflow used for managing project tasks, Image created by the team using draw.io._
+
+- To Do – tasks that have been identified but not yet started
+- Doing – tasks that a team member is currently working on
+- Review – tasks that have been completed and require checking by another team member
+- Done – tasks that have been reviewed and approved as complete
+
+Each task will be represented by a card on the board. Cards may include descriptions, checklists, and assigned team members so responsibilities are clearly defined. At the start of the project, tasks will be divided between team members based on the project requirements and areas of responsibility.
+
+The team will collaborate using Trello, Discord, and GitHub. Trello will be used to track progress and manage tasks, Discord will support communication and discussion between team members, and GitHub will be used for version control and code collaboration through feature branches and pull requests.
+
+For example, a task such as “Build Wireframes” will be created as a card on the Trello board with a checklist of required pages and device types. As work progresses, checklist items will be marked as completed and the card will move through the workflow stages from To Do → Doing → Review → Done.
+
+Using Kanban will provide a clear overview of project tasks and help ensure that work progresses in an organised and transparent manner throughout the development process.
+
+![Trello Kanban board used to manage project tasks](Trello/2026-03-07-7.png)
+
+_Fig 6. Trello Kanban board used by the team to organise and track project tasks through the workflow stages To Do, Doing, Review, and Done. Screenshot taken from the project Trello board._
+
+Additional screenshots of the Trello board at different stages of the project are included in the [Trello folder](Trello/) of the repository.
 
 ## 4. Client/server explanation
 
@@ -134,7 +165,7 @@ This separation ensures that the frontend focuses on presentation and usability,
 
 ![Client Server Communication](img/client-server-communication.png)
 
-_Fig 5. Client–server communication flow between the user's browser, the internet network and the application server._
+_Fig 7. Client–server communication flow between the user's browser, the internet network and the application server._
 
 Communication between the client and server follows a RESTful request–response model over HTTP.
 The React frontend sends HTTP requests (GET, POST, PUT, DELETE) to API endpoints defined in the Express backend.
@@ -147,14 +178,14 @@ Each request follows this process:
 5. The model performs database operations in MongoDB.
 6. The server returns a structured JSON response.
 7. The client updates the interface based on the response.
-   
+
 Because this architecture is stateless, each request contains all the information required to process it. It reduces the server's reliance on session state and supports scalability.
 
 ## 4.2 Data Distribution
 
 ![Data Distribution](img/data-distribution.png)
 
-_Fig 6. Data distribution between multiple clients, the central server and the database._
+_Fig 8. Data distribution between multiple clients, the central server and the database._
 
 GAMS centralises all persistent data within MongoDB, which acts as the single source of truth.
 The client does not store authoritative system data. Instead, it retrieves data from the backend when needed and updates information only through API requests.
@@ -172,7 +203,7 @@ By keeping decision-making logic on the server, the system prevents users from b
 
 ![Authentication and Authorisation](img/authentication-authorisation.png)
 
-_Fig 7. Authentication and role-based authorisation process within the GAMS system._
+_Fig 9. Authentication and role-based authorisation process within the GAMS system._
 
 GAMS uses role-based authorisation to control access to sensitive features.
 After authentication, the backend identifies the user and assigns permissions based on their role (for example, regular user or admin).
@@ -189,7 +220,7 @@ Admin users have additional permissions. They can:
 2. Update stock quantities.
 3. Manage availability settings.
 4. Perform administrative management actions.
-The backend enforces these permissions on protected routes. Even if the frontend hides certain interface elements, the server performs the final authorisation check before executing any restricted operation.
+   The backend enforces these permissions on protected routes. Even if the frontend hides certain interface elements, the server performs the final authorisation check before executing any restricted operation.
 
 ## 4.5 Validation
 
@@ -203,12 +234,13 @@ However, client-side validation is not sufficient for security because users can
 ### Server-side validation (Express + Mongoose)
 
 The backend performs final validation before updating the database. The server verifies that:
+
 1. Required fields are present
 2. Data types are correct
 3. Values comply with business rules (for example, stock_qty cannot be negative)
 4. The target record exists.
-Mongoose schema definitions provide additional validation at the model level to maintain data consistency.
-If validation fails, the server returns an appropriate error response and does not modify the database. If validation succeeds, the server completes the request and returns a success response to the client.
+   Mongoose schema definitions provide additional validation at the model level to maintain data consistency.
+   If validation fails, the server returns an appropriate error response and does not modify the database. If validation succeeds, the server completes the request and returns a success response to the client.
 
 ## 5. ERD explanation
 
@@ -216,13 +248,36 @@ The Entity Relationship Diagram (ERD) models the core data structures and intera
 
 <center><img src=".\ERD\guild-erd.png" alt="ERD Guild Availability Management System - Planing and Design Version">  </center>
 
-_Fig 5. Entity Relationship Diagram (ERD) for the Guild Availability Management System, created by the student team using draw.io._
+_Fig 10. Entity Relationship Diagram (ERD) for the Guild Availability Management System, created by the student team using draw.io._
 
-The ERD follows a fully normalised design, reducing redundancy and  clarifying the relationships between users, items, and contracts, while also supporting polymorphic associations for watch and notification functionality. This schema provides a stable foundation for the application’s API, business logic, and future scalability.
+The ERD follows a fully normalised design, reducing redundancy and clarifying the relationships between users, items, and contracts, while also supporting polymorphic associations for watch and notification functionality. This schema provides a stable foundation for the application’s API, business logic, and future scalability.
 
 ## 6. User stories
 
 ## 7. Ethical considerations
+
+During the design and development of the Guild Availability Management System (GAMS), the team followed several ethical principles to make sure the system is secure, responsible, and respectful of users and their data. These principles guide how the system manages information, controls access, and responds when users interact with the application.
+
+### Privacy and Data Protection
+Protecting user data is an important ethical responsibility when developing modern software systems. GAMS stores basic user account information, such as usernames and passwords, so it is important that this data is handled securely. Passwords are protected using hashing techniques rather than being stored in plain text, which follows recommended practices for secure password storage (OWASP, 2023).
+
+The application only stores the information necessary for the system to function, helping to reduce unnecessary collection of personal data. User data is stored in MongoDB, and the backend server controls access to the database to ensure that sensitive information is not exposed directly to the client side of the application.
+
+### Security
+Security is important for the GAMS system because the application manages user accounts and different levels of access. For this reason, the system checks the user's identity before allowing access to certain features. Users log in to the system, and the application verifies their identity before they can interact with items, contracts, or other system functions.
+
+Different users may also have different permissions. For example, an administrator can manage items or update system data, while a standard user can only view information and use features available to them.
+
+The backend server, built using Express.js, also checks requests before processing them. Instead of trusting the client, the server verifies that the request is valid and that the user has permission to perform the action. This helps prevent users from manipulating requests or accessing restricted functionality through the frontend interface. These practices follow common web security recommendations for protecting applications and user data (OWASP, 2023).
+
+### Transparency
+In the GAMS system, users receive feedback when they perform actions in the application. For example, if a user reserves an item or accepts a contract, the system displays a confirmation message. Notifications can also appear to inform users of changes or updates.
+
+This type of feedback helps users understand what happened after they acted. It also makes it easier to understand the system's current state.
+
+### Accountability
+Accountability means that important actions are recorded, if needed, for later review. For example, when users reserve an item, accept a contract, or receive a notification, the system stores this information in the database.
+Keeping a record of these actions helps developers or administrators understand what happened in the system if a problem occurs. Storing this data in MongoDB allows the system to keep a consistent history of user activity and system events (ACM, 2018).
 
 ## 8. Wireframe overview
 
