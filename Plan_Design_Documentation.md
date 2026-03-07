@@ -239,6 +239,29 @@ The ERD follows a fully normalised design, reducing redundancy and clarifying th
 
 ## 7. Ethical considerations
 
+During the design and development of the Guild Availability Management System (GAMS), the team followed several ethical principles to make sure the system is secure, responsible, and respectful of users and their data. These principles guide how the system manages information, controls access, and responds when users interact with the application.
+
+### Privacy and Data Protection
+Protecting user data is an important ethical responsibility when developing modern software systems. GAMS stores basic user account information, such as usernames and passwords, so it is important that this data is handled securely. Passwords are protected using hashing techniques rather than being stored in plain text, which follows recommended practices for secure password storage (OWASP, 2023).
+
+The application only stores the information necessary for the system to function, helping to reduce unnecessary collection of personal data. User data is stored in MongoDB, and the backend server controls access to the database to ensure that sensitive information is not exposed directly to the client side of the application.
+
+### Security
+Security is important for the GAMS system because the application manages user accounts and different levels of access. For this reason, the system checks the user's identity before allowing access to certain features. Users log in to the system, and the application verifies their identity before they can interact with items, contracts, or other system functions.
+
+Different users may also have different permissions. For example, an administrator can manage items or update system data, while a standard user can only view information and use features available to them.
+
+The backend server, built using Express.js, also checks requests before processing them. Instead of trusting the client, the server verifies that the request is valid and that the user has permission to perform the action. This helps prevent users from manipulating requests or accessing restricted functionality through the frontend interface. These practices follow common web security recommendations for protecting applications and user data (OWASP, 2023).
+
+### Transparency
+In the GAMS system, users receive feedback when they perform actions in the application. For example, if a user reserves an item or accepts a contract, the system displays a confirmation message. Notifications can also appear to inform users of changes or updates.
+
+This type of feedback helps users understand what happened after they acted. It also makes it easier to understand the system's current state.
+
+### Accountability
+Accountability means that important actions are recorded, if needed, for later review. For example, when users reserve an item, accept a contract, or receive a notification, the system stores this information in the database.
+Keeping a record of these actions helps developers or administrators understand what happened in the system if a problem occurs. Storing this data in MongoDB allows the system to keep a consistent history of user activity and system events (ACM, 2018).
+
 ## 8. Wireframe overview
 
 ## 9. Conclusion
