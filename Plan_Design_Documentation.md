@@ -114,7 +114,10 @@ This separation ensures that the frontend focuses on presentation and usability,
 
 ## 4.1 Client/Server Communication
 
-(image)
+![Client Server Communication](img/client-server-communication.png)
+
+_Fig 5. Client–server communication flow between the user's browser, the internet network and the application server._
+
 Communication between the client and server follows a RESTful request–response model over HTTP.
 The React frontend sends HTTP requests (GET, POST, PUT, DELETE) to API endpoints defined in the Express backend.
 Each request follows this process:
@@ -131,7 +134,10 @@ Because this architecture is stateless, each request contains all the informatio
 
 ## 4.2 Data Distribution
 
-(image)
+![Data Distribution](img/data-distribution.png)
+
+_Fig 6. Data distribution between multiple clients, the central server and the database._
+
 GAMS centralises all persistent data within MongoDB, which acts as the single source of truth.
 The client does not store authoritative system data. Instead, it retrieves data from the backend when needed and updates information only through API requests.
 The server manages all database interactions and determines what data can be accessed or modified. Core entities such as Users, Items, Contracts, Reservations, Watchlists, and Notifications are stored in MongoDB and accessed exclusively through the backend.
@@ -146,7 +152,10 @@ By keeping decision-making logic on the server, the system prevents users from b
 
 ## 4.4 Authorisation
 
-(image)
+![Authentication and Authorisation](img/authentication-authorisation.png)
+
+_Fig 7. Authentication and role-based authorisation process within the GAMS system._
+
 GAMS uses role-based authorisation to control access to sensitive features.
 After authentication, the backend identifies the user and assigns permissions based on their role (for example, regular user or admin).
 Regular users can:
