@@ -2,7 +2,7 @@
 
 ## DEV1003 - Advanced Applications - Assessment 1
 
-### Courtney - Lorena Borges Amaral - Simona
+### Courtney - Lorena Borges Amaral - Simona Chiapperino
 
 # MERN Project - Guild Availability Management System (GAMS)
 
@@ -105,6 +105,23 @@ _Fig 4. MVC Applied in GAMS project Diagram, Image created by the team using dra
 
 ## 3. Development methodologies
 
+## Project Management Methodology
+
+The team developed the Guild Availability Management System (GAMS) using an Agile project management approach supported by a Kanban-style workflow. This approach allowed the team to divide the project into smaller tasks and progress through continuous planning, development, and review.
+
+The team managed project tasks using Trello as a visual task management tool. The Trello board organised work into columns representing different stages of development, including "To Do", "In Progress", and "Completed". The team created tasks as Trello cards and moved them across the board as development progressed.
+
+The board listed the main project activities, including documentation sections, system diagrams, and architecture design tasks. Team members selected cards, updated their progress as they worked on them, and moved them to the completed column once they finished the task. This structure helped the team clearly track responsibilities and ensure that all required sections of the project were completed.
+
+Each Trello card included a checklist of the smaller steps required to complete the task. Team members ticked each checklist item after completing the step, which helped track progress and ensured that all parts of the task were finished before moving the card to the completed column.
+
+For example, the Trello card for the client/server architecture documentation: A team member selected the task, prepared the diagrams and explanations, and updated the checklist as each step was completed. After the team reviewed the section, the member moved the card from "In Progress" to "Completed".
+
+The team used GitHub for version control and collaborative development. We also worked on assigned tasks and committed the changes to the shared repository. GitHub allowed the team to track updates, review contributions, and integrate new features into the project without overwriting each other's work.
+
+The team communicated and coordinated project work through Discord. We used messaging channels and voice meetings to discuss development progress, ask questions, and share updates. Team members frequently posted progress updates on Discord to report completed tasks and coordinate the project's next steps.
+
+This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
 ### 3.1 Project management methodology: Agile
 
 ### 3.2 Task management methodology: Kanban
