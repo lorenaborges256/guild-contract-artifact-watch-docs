@@ -105,7 +105,7 @@ _Fig 4. MVC Applied in GAMS project Diagram, Image created by the team using dra
 
 ## 3. Development methodologies
 
-The development of the Guild Availability Management System (GAMS) followed structured project management and task organisation practices. The team adopted an Agile approach to guide the overall development process and support iterative collaboration throughout the project.
+The development of the Guild Availability Management System (GAMS) followed structured project management and task organisation practices. The team adopted an Agile approach to guide the overall development process and support iterative collaboration throughout the project²
 
 To organise daily work and track progress, the team used the Kanban methodology. The following sections describe how Agile guided the development approach and how Kanban was used to manage project tasks.
 
@@ -123,8 +123,6 @@ Another advantage of Agile in this project was its focus on incremental progress
 For example, the team worked on the client/server architecture section in several steps. A team member first wrote the explanation, then created the supporting diagrams, and finally the section was reviewed before being added to the final document.
 
 This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
-
-### 3.1 Project management methodology: Agile
 
 ### 3.2 Task management methodology: Kanban
 
@@ -157,7 +155,7 @@ Additional screenshots of the Trello board at different stages of the project ar
 
 ## 4. Client/server explanation
 
-The Guild Availability Management System (GAMS) follows a client–server architecture implemented using the MERN stack (MongoDB, Express, React, Node.js). This architecture separates responsibilities between the frontend and backend to improve maintainability, scalability, and security.
+The Guild Availability Management System (GAMS) follows a client–server architecture implemented using the MERN stack (MongoDB, Express, React, Node.js)³. This architecture separates responsibilities between the frontend and backend to improve maintainability, scalability, and security.
 In this model, the React application acts as the client. It runs in the user’s browser and is responsible for rendering the user interface, handling user interactions, and sending HTTP requests to the backend API.
 The Express application acts as the server. It receives incoming requests, applies business logic, validates data, enforces authorisation rules, and communicates with MongoDB through Mongoose models.
 MongoDB serves as the persistent data layer. It stores core entities such as Users, Items, Contracts, Reservations, Watchlists, and Notifications. All permanent system data is managed centrally through the backend, ensuring data integrity and preventing direct client access to the database.
@@ -189,7 +187,7 @@ Because this architecture is stateless, each request contains all the informatio
 
 _Fig 8. Data distribution between multiple clients, the central server and the database._
 
-GAMS centralises all persistent data within MongoDB, which acts as the single source of truth.
+GAMS centralises all persistent data within MongoDB, which acts as the single source of truth⁴.
 The client does not store authoritative system data. Instead, it retrieves data from the backend when needed and updates information only through API requests.
 The server manages all database interactions and determines what data can be accessed or modified. Core entities such as Users, Items, Contracts, Reservations, Watchlists, and Notifications are stored in MongoDB and accessed exclusively through the backend.
 This approach ensures consistency, prevents client-side manipulation of sensitive information, and maintains overall system integrity.
@@ -226,7 +224,7 @@ Admin users have additional permissions. They can:
 
 ## 4.5 Validation
 
-Validation ensures that incoming data meets system requirements before being processed or stored.
+Validation ensures that incoming data meets system requirements before being processed or stored⁵.
 
 ### Client-side validation (React)
 
@@ -273,7 +271,7 @@ During the design and development of the Guild Availability Management System (G
 
 ### Privacy and Data Protection
 
-Protecting user data is an important ethical responsibility when developing modern software systems. GAMS stores basic user account information, such as usernames and passwords, so it is important that this data is handled securely. Passwords are protected using hashing techniques rather than being stored in plain text, which follows recommended practices for secure password storage (OWASP, 2023).
+Protecting user data is an important ethical responsibility when developing modern software systems. GAMS stores basic user account information, such as usernames and passwords, so it is important that this data is handled securely. Passwords are protected using hashing techniques rather than being stored in plain text, which follows recommended practices for secure password storage⁶.
 
 The application only stores the information necessary for the system to function, helping to reduce unnecessary collection of personal data. User data is stored in MongoDB, and the backend server controls access to the database to ensure that sensitive information is not exposed directly to the client side of the application.
 
@@ -283,18 +281,17 @@ Security is important for the GAMS system because the application manages user a
 
 Different users may also have different permissions. For example, an administrator can manage items or update system data, while a standard user can only view information and use features available to them.
 
-The backend server, built using Express.js, also checks requests before processing them. Instead of trusting the client, the server verifies that the request is valid and that the user has permission to perform the action. This helps prevent users from manipulating requests or accessing restricted functionality through the frontend interface. These practices follow common web security recommendations for protecting applications and user data (OWASP, 2023).
+The backend server, built using Express.js, also checks requests before processing them. Instead of trusting the client, the server verifies that the request is valid and that the user has permission to perform the action. This helps prevent users from manipulating requests or accessing restricted functionality through the frontend interface. These practices follow common web security recommendations for protecting applications and user data⁶.
 
 ### Transparency
 
 In the GAMS system, users receive feedback when they perform actions in the application. For example, if a user reserves an item or accepts a contract, the system displays a confirmation message. Notifications can also appear to inform users of changes or updates.
-
 This type of feedback helps users understand what happened after they acted. It also makes it easier to understand the system's current state.
 
 ### Accountability
 
 Accountability means that important actions are recorded, if needed, for later review. For example, when users reserve an item, accept a contract, or receive a notification, the system stores this information in the database.
-Keeping a record of these actions helps developers or administrators understand what happened in the system if a problem occurs. Storing this data in MongoDB allows the system to keep a consistent history of user activity and system events (ACM, 2018).
+Keeping a record of these actions helps developers or administrators understand what happened in the system if a problem occurs. Storing this data in MongoDB allows the system to maintain a consistent history of user activity and system events⁷.
 
 ## 8. Wireframe overview
 
@@ -430,3 +427,9 @@ Testing strategies, validation rules, and security considerations will also need
 ## 10. References
 
 1. MVC Image from [https://edstem.org/au/courses/25180/lessons/84072/slides/573930]
+2. Atlassian. (2023). Agile project management. Available at: https://www.atlassian.com/agile
+3. MDN Web Docs. (2023). Client–server overview. Available at: https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview
+4.MongoDB. (2023). MongoDB Data Model and Architecture. Available at: https://www.mongodb.com/docs
+5. MDN Web Docs. (2023). Form validation and server-side validation. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+6. MDN Web Docs. (2023). Password security. https://developer.mozilla.org/en-US/docs/Web/Security
+7. ACM.(2018). ACM Code of Ethics and Professional Conduct. Available at: https://www.acm.org/code-of-ethics
