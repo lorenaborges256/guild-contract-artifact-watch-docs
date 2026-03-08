@@ -117,7 +117,9 @@ Another advantage of Agile in this project was its focus on incremental progress
 
 For example, the team worked on the client/server architecture section in several steps. A team member first wrote the explanation, then created the supporting diagrams, and finally the section was reviewed before being added to the final document.
 
-Overall, Agile gave the team a practical way to organise the project, collaborate effectively, and refine the work throughout development instead of leaving all review and correction until the final stage. Agile project management supports collaboration, flexibility, and iterative progress in software development (Atlassian, 2023).
+This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
+
+### 3.1 Project management methodology: Agile
 
 ### 3.2 Task management methodology: Kanban
 
@@ -249,16 +251,29 @@ The ERD follows a fully normalised design, reducing redundancy and clarifying th
 
 ## 6. User stories
 
+| Persona                          | User Story                                                                                                                             | Need / Justification                                                                                                        | Acceptance Criteria                                                                                                                                                                         |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Guild Member (Equipment User)    | As a guild member, I want to browse available items so that I can see what items are available for purchase or collection.             | Guild members need visibility of available guild resources so they can plan purchases and obtain items when needed.         | The system displays a list of items; users can filter items by category and availability; item cards display key information; users can navigate to the item details page.                  |
+| Guild Member (Equipment User)    | As a guild member, I want to reserve an available item so that I can purchase and collect it from the guild.                           | Reserving items allows users to secure limited resources before collecting them in person from the guild.                   | Users can click **Reserve** on an available item; the system records the reservation; a reservation number is generated; the item status updates; the reservation appears in the dashboard. |
+| Guild Member (Contract Hunter)   | As a guild member, I want to view available contracts so that I can choose missions to participate in.                                 | Guild members need a way to discover available missions and activities offered by the guild.                                | The system displays a list of contracts; users can filter contracts by type or availability; contract cards show key information; users can view contract details.                          |
+| Guild Member (Contract Hunter)   | As a guild member, I want to accept a contract so that I can participate in missions and earn rewards.                                 | Accepting contracts allows users to commit to missions and track their participation.                                       | Users can view contract details; users can click **Accept** on available contracts; the accepted contract appears on the user's dashboard.                                                  |
+| Guild Member (Watcher / Planner) | As a guild member, I want to watch items or contracts so that I receive notifications when they become available.                      | Users may want items or contracts that are currently unavailable and need a way to track their availability.                | Users can click **Watch** on items or contracts; watched items appear in the watchlist; the system sends notifications when availability changes.                                           |
+| Guild Member (Watcher / Planner) | As a guild member, I want to view my reserved items and accepted contracts in a dashboard so that I can track my current commitments.  | Users need a central overview of their activity to manage reservations and missions effectively.                            | The dashboard displays reserved items and accepted contracts; users can toggle between sections; users can search for items or reservations.                                                |
+| New Guild Member                 | As a new guild member, I want to create an account so that I can access guild resources and participate in guild activities.           | New users need a way to register and gain access to the system before they can browse items or contracts.                   | Users can register with name, email, and password; form validation ensures required fields are completed; users can log in after successful registration.                                   |
+| Guild Administrator              | As a guild administrator, I want to manage items and contracts so that guild members have access to accurate and up-to-date resources. | Administrators need to maintain system resources so guild members can reliably browse, reserve items, and accept contracts. | Administrators can create or update items and contracts; changes are saved in the system; updated information is visible to guild members in the listings.                                  |
+
 ## 7. Ethical considerations
 
 During the design and development of the Guild Availability Management System (GAMS), the team followed several ethical principles to make sure the system is secure, responsible, and respectful of users and their data. These principles guide how the system manages information, controls access, and responds when users interact with the application.
 
 ### Privacy and Data Protection
+
 Protecting user data is an important ethical responsibility when developing modern software systems. GAMS stores basic user account information, such as usernames and passwords, so it is important that this data is handled securely. Passwords are protected using hashing techniques rather than being stored in plain text, which follows recommended practices for secure password storage (OWASP, 2023).
 
 The application only stores the information necessary for the system to function, helping to reduce unnecessary collection of personal data. User data is stored in MongoDB, and the backend server controls access to the database to ensure that sensitive information is not exposed directly to the client side of the application.
 
 ### Security
+
 Security is important for the GAMS system because the application manages user accounts and different levels of access. For this reason, the system checks the user's identity before allowing access to certain features. Users log in to the system, and the application verifies their identity before they can interact with items, contracts, or other system functions.
 
 Different users may also have different permissions. For example, an administrator can manage items or update system data, while a standard user can only view information and use features available to them.
@@ -266,15 +281,125 @@ Different users may also have different permissions. For example, an administrat
 The backend server, built using Express.js, also checks requests before processing them. Instead of trusting the client, the server verifies that the request is valid and that the user has permission to perform the action. This helps prevent users from manipulating requests or accessing restricted functionality through the frontend interface. These practices follow common web security recommendations for protecting applications and user data (OWASP, 2023).
 
 ### Transparency
+
 In the GAMS system, users receive feedback when they perform actions in the application. For example, if a user reserves an item or accepts a contract, the system displays a confirmation message. Notifications can also appear to inform users of changes or updates.
 
 This type of feedback helps users understand what happened after they acted. It also makes it easier to understand the system's current state.
 
 ### Accountability
+
 Accountability means that important actions are recorded, if needed, for later review. For example, when users reserve an item, accept a contract, or receive a notification, the system stores this information in the database.
 Keeping a record of these actions helps developers or administrators understand what happened in the system if a problem occurs. Storing this data in MongoDB allows the system to keep a consistent history of user activity and system events (ACM, 2018).
 
 ## 8. Wireframe overview
+
+### Login - Desktop
+
+![Login Desktop Wireframe](wireframes/01%20Login%20-%20Desktop.png)
+
+_Fig 8. Desktop wireframe for the login page showing the layout of the login form and authentication interface._
+
+### Login - Tablet & Mobile
+
+![Login Tablet and Mobile Wireframe](wireframes/02%20Login%20-%20Tablet%20%26%20Mobile.png)
+
+_Fig 9. Tablet and mobile wireframes for the login page demonstrating the responsive layout for smaller screen sizes._
+
+### Register - Desktop
+
+![Register Desktop Wireframe](wireframes/03%20Register%20-%20Desktop.png)
+
+_Fig 10. Desktop wireframe for the user registration page showing the form layout and account creation fields._
+
+### Register - Tablet & Mobile
+
+![Register Tablet and Mobile Wireframe](wireframes/04%20Register%20-%20Tablet%20%26%20Mobile.png)
+
+_Fig 11. Tablet and mobile wireframes for the user registration page demonstrating the responsive layout._
+
+### Dashboard - Desktop (User)
+
+![Dashboard Desktop Wireframe](<wireframes/05%20Dashboard%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 12. Desktop wireframe for the user dashboard showing navigation, overview information, and key interaction areas._
+
+### Dashboard - Tablet & Mobile (User)
+
+![Dashboard Tablet and Mobile Wireframe](<wireframes/06%20Dashboard%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 13. Tablet and mobile wireframes for the user dashboard illustrating how the layout adapts to smaller screens._
+
+### Items - Desktop (User)
+
+![Items Desktop Wireframe](<wireframes/07%20Items%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 14. Desktop wireframe for the items listing page displaying available items and navigation elements._
+
+### Items - Tablet & Mobile (User)
+
+![Items Tablet and Mobile Wireframe](<wireframes/08%20Items%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 15. Tablet and mobile wireframes for the items listing page demonstrating the responsive layout._
+
+### Item Details - Desktop (User)
+
+![Item Details Desktop Wireframe](<wireframes/09%20Item%20Details%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 16. Desktop wireframe for the item details page showing item information, availability, and interaction options._
+
+### Item Details - Tablet & Mobile (User)
+
+![Item Details Tablet and Mobile Wireframe](<wireframes/10%20Item%20Details%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 17. Tablet and mobile wireframes for the item details page demonstrating the responsive layout._
+
+### Contracts - Desktop (User)
+
+![Contracts Desktop Wireframe](<wireframes/11%20Contracts%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 18. Desktop wireframe for the contracts page displaying available contracts and interaction elements._
+
+### Contracts - Tablet & Mobile (User)
+
+![Contracts Tablet and Mobile Wireframe](<wireframes/12%20Contracts%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 19. Tablet and mobile wireframes for the contracts page demonstrating the responsive layout._
+
+### Contract Details - Desktop (User)
+
+![Contract Details Desktop Wireframe](<wireframes/14%20Contract%20Details%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 20. Desktop wireframe for the contract details page showing contract information and interaction options._
+
+### Contract Details - Tablet & Mobile (User)
+
+![Contract Details Tablet and Mobile Wireframe](<wireframes/15%20Contract%20Details%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 21. Tablet and mobile wireframes for the contract details page demonstrating the responsive layout._
+
+### Watchlist - Desktop (User)
+
+![Watchlist Desktop Wireframe](<wireframes/16%20Watchlist%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 22. Desktop wireframe for the watchlist page displaying monitored items and contracts._
+
+### Watchlist - Tablet & Mobile (User)
+
+![Watchlist Tablet and Mobile Wireframe](<wireframes/17%20Watchlist%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 23. Tablet and mobile wireframes for the watchlist page demonstrating the responsive layout._
+
+### Notifications - Desktop (User)
+
+![Notifications Desktop Wireframe](<wireframes/19%20Notifications%20%E2%80%93%20Desktop%20(User).png>)
+
+_Fig 24. Desktop wireframe for the notifications interface showing alerts related to watched items and contracts._
+
+### Notifications - Tablet & Mobile (User)
+
+![Notifications Tablet and Mobile Wireframe](<wireframes/20%20Notifications%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+
+_Fig 25. Tablet and mobile wireframes for the notifications interface demonstrating the responsive layout._
 
 ## 9. Conclusion
 
