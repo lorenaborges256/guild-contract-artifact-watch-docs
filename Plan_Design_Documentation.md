@@ -105,6 +105,10 @@ _Fig 4. MVC Applied in GAMS project Diagram, Image created by the team using dra
 
 ## 3. Development methodologies
 
+The development of the Guild Availability Management System (GAMS) followed structured project management and task organisation practices. The team adopted an Agile approach to guide the overall development process and support iterative collaboration throughout the project.
+
+To organise daily work and track progress, the team used the Kanban methodology. The following sections describe how Agile guided the development approach and how Kanban was used to manage project tasks.
+
 ## Project Management Methodology
 
 The team developed the Guild Availability Management System (GAMS) using an Agile project management approach supported by a Kanban-style workflow. This approach allowed the team to divide the project into smaller tasks and progress through continuous planning, development, and review.
