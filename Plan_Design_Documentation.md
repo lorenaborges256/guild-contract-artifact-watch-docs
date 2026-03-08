@@ -9,7 +9,7 @@
 ## 1. Project Overview
 
 The **Guild Availability Management System (GAMS)** is developed using an Object‑Oriented Programming (OOP) paradigm, where core entities will be modelled as objects with their own state and behaviour. The application follows a Model–View–Controller (MVC) architecture, separating data management, business logic, and user interface into clear layers that improve maintainability and scalability.  
-As a MERN application, it will operates on a client/server model, with the React client handling user interactions while the Express/Mongoose server processes requests, applies business rules, and communicates with the MongoDB database.  
+As a MERN application, it will operate on a client/server model, with the React client handling user interactions while the Express/Mongoose server processes requests, applies business rules, and communicates with the MongoDB database.  
 The project is managed using Agile principles, supporting iterative development, continuous feedback, and adaptability as requirements evolve. Task organisation is structured through a Kanban workflow, providing visibility of progress and enabling efficient team collaboration.  
 Throughout development, the system adheres to ethical principles, prioritising user privacy, transparency, accessibility, and responsible handling of data to ensure a trustworthy and user‑centred application.
 
@@ -109,7 +109,6 @@ The development of the Guild Availability Management System (GAMS) followed stru
 
 To organise daily work and track progress, the team used the Kanban methodology. The following sections describe how Agile guided the development approach and how Kanban was used to manage project tasks.
 
-
 ### 3.1 Project management methodology: Agile
 
 The team developed the Guild Availability Management System (GAMS) using an Agile project management approach. Agile supported the project by encouraging iterative development, regular communication, and flexibility throughout the planning and design process. Rather than treating the project as a single fixed task, the team developed the work progressively and reviewed sections as the project moved forward.
@@ -140,7 +139,7 @@ A Trello board will be used to implement the Kanban workflow. The board will be 
 
 ![Kanban Workflow](img/KanbanFlow.png)
 
-_Fig 5. Kanban task workflow used for managing project tasks, Image created by the team using draw.io._
+_Fig 7. Kanban task workflow used for managing project tasks, Image created by the team using draw.io._
 
 - To Do – tasks that have been identified but not yet started
 - Doing – tasks that a team member is currently working on
@@ -157,7 +156,7 @@ Using Kanban will provide a clear overview of project tasks and help ensure that
 
 ![Trello Kanban board used to manage project tasks](Trello/2026-03-07-7.png)
 
-_Fig 6. Trello Kanban board used by the team to organise and track project tasks through the workflow stages To Do, Doing, Review, and Done. Screenshot taken from the project Trello board._
+_Fig 8. Trello Kanban board used by the team to organise and track project tasks through the workflow stages To Do, Doing, Review, and Done. Screenshot taken from the project Trello board._
 
 Additional screenshots of the Trello board at different stages of the project are included in the [Trello folder](Trello/) of the repository.
 
@@ -173,7 +172,7 @@ This separation ensures that the frontend focuses on presentation and usability,
 
 ![Client Server Communication](img/client-server-communication.png)
 
-_Fig 7. Client–server communication flow between the user's browser, the internet network and the application server._
+_Fig 9. Client–server communication flow between the user's browser, the internet network and the application server._
 
 Communication between the client and server follows a RESTful request–response model over HTTP.
 The React frontend sends HTTP requests (GET, POST, PUT, DELETE) to API endpoints defined in the Express backend.
@@ -193,7 +192,7 @@ Because this architecture is stateless, each request contains all the informatio
 
 ![Data Distribution](img/data-distribution.png)
 
-_Fig 8. Data distribution between multiple clients, the central server and the database._
+_Fig 10. Data distribution between multiple clients, the central server and the database._
 
 GAMS centralises all persistent data within MongoDB, which acts as the single source of truth⁴.
 The client does not store authoritative system data. Instead, it retrieves data from the backend when needed and updates information only through API requests.
@@ -211,7 +210,7 @@ By keeping decision-making logic on the server, the system prevents users from b
 
 ![Authentication and Authorisation](img/authentication-authorisation.png)
 
-_Fig 9. Authentication and role-based authorisation process within the GAMS system._
+_Fig 11. Authentication and role-based authorisation process within the GAMS system._
 
 GAMS uses role-based authorisation to control access to sensitive features.
 After authentication, the backend identifies the user and assigns permissions based on their role (for example, regular user or admin).
@@ -252,13 +251,26 @@ The backend performs final validation before updating the database. The server v
 
 ## 5. ERD explanation
 
-The Entity Relationship Diagram (ERD) models the core data structures and interactions within the Guild Contract & Item Watch System, capturing how users engage with items, contracts, reservations, and notifications. It separates the two availability, behaviours—inventory‑based items and time‑window‑based contracts—into distinct entities, each with their own attributes and relational rules. Supporting entities such as Reservation, ContractAcceptance, Watchlist, and Notification represent user actions and system‑generated events, ensuring that every interaction is stored in a structured and traceable way.
+The Entity Relationship Diagram (ERD) models the core data structures and interactions within the Guild Contract & Item Watch System, capturing how users engage with items, contracts, reservations, and notifications. It separates the two availability behaviours—inventory‑based items and time‑window‑based contracts—into distinct entities, each with their own attributes and relational rules. Supporting entities such as Reservation, ContractAcceptance, Watchlist, and Notification represent user actions and system‑generated events, ensuring that every interaction is stored in a structured and traceable way.
 
-<center><img src=".\ERD\guild-erd.png" alt="ERD Guild Availability Management System - Planing and Design Version">  </center>
+<center><img src=".\ERD\guild-erd.png" alt="ERD Guild Availability Management System - Planning and Design Version">  </center>
 
-_Fig 10. Entity Relationship Diagram (ERD) for the Guild Availability Management System, created by the student team using draw.io._
+_Fig 12. Entity Relationship Diagram (ERD) for the Guild Availability Management System, created by the student team using draw.io._
 
-The ERD follows a fully normalised design, reducing redundancy and clarifying the relationships between users, items, and contracts, while also supporting polymorphic associations for watch and notification functionality. This schema provides a stable foundation for the application’s API, business logic, and future scalability.
+### ERD Relationship Summary
+
+| Relationship                  | Type        | Description                                                                                            |
+| ----------------------------- | ----------- | ------------------------------------------------------------------------------------------------------ |
+| User → Reservation            | One-to-Many | A user can create multiple reservations, but each reservation belongs to one user.                     |
+| Item → Reservation            | One-to-Many | An item can have many reservations while stock is available, but each reservation relates to one item. |
+| User → ContractAcceptance     | One-to-Many | A user can accept multiple contracts, but each acceptance record belongs to one user.                  |
+| Contract → ContractAcceptance | One-to-Many | A contract can be accepted by multiple users up to its maximum acceptance limit.                       |
+| User → Watchlist              | One-to-Many | A user can have multiple watchlist entries, each linked to a target entity.                            |
+| Target → Watchlist            | One-to-Many | A target (representing an item or contract) can appear in the watchlists of multiple users.            |
+| User → Notification           | One-to-Many | A user can receive multiple notifications related to watched targets.                                  |
+| Target → Notification         | One-to-Many | A target (representing an item or contract) can generate notifications for multiple users watching it. |
+
+The ERD follows a design normalised to Third Normal Form (3NF), reducing redundancy and clarifying the relationships between users, items, and contracts, while supporting watchlist and notification functionality. This schema provides a stable foundation for the application’s API, business logic, and future scalability.
 
 ## 6. User stories
 
@@ -311,121 +323,121 @@ The user flow diagram can be found [here](<img/userflow (1).png>).
 
 ![Login Desktop Wireframe](<wireframes/01 Login - Desktop.png>)
 
-_Fig 11. Desktop wireframe for the login page showing the layout of the login form and authentication interface._
+_Fig 13. Desktop wireframe for the login page showing the layout of the login form and authentication interface._
 
 ### Login - Tablet & Mobile
 
 ![Login Tablet and Mobile Wireframe](<wireframes/02 Login - Tablet & Mobile.png>)
 
-_Fig 12. Tablet and mobile wireframes for the login page demonstrating the responsive layout for smaller screen sizes._
+_Fig 14. Tablet and mobile wireframes for the login page demonstrating the responsive layout for smaller screen sizes._
 
 ### Register - Desktop
 
 ![Register Desktop Wireframe](<wireframes/03 Register - Desktop.png>)
 
-_Fig 13. Desktop wireframe for the user registration page showing the form layout and account creation fields._
+_Fig 15. Desktop wireframe for the user registration page showing the form layout and account creation fields._
 
 ### Register - Tablet & Mobile
 
 ![Register Tablet and Mobile Wireframe](<wireframes/04 Register - Tablet & Mobile.png>)
 
-_Fig 14. Tablet and mobile wireframes for the user registration page demonstrating the responsive layout._
+_Fig 16. Tablet and mobile wireframes for the user registration page demonstrating the responsive layout._
 
 ### Dashboard - Desktop (User)
 
 ![Dashboard Desktop Wireframe](<wireframes/05 Dashboard – Desktop (User).png>)
 
-_Fig 15. Desktop wireframe for the user dashboard showing navigation, overview information, and key interaction areas._
+_Fig 17. Desktop wireframe for the user dashboard showing navigation, overview information, and key interaction areas._
 
 ### Dashboard - Tablet & Mobile (User)
 
 ![Dashboard Tablet and Mobile Wireframe](<wireframes/06 Dashboard – Tablet & Mobile (User).png>)
 
-_Fig 16. Tablet and mobile wireframes for the user dashboard illustrating how the layout adapts to smaller screens._
+_Fig 18. Tablet and mobile wireframes for the user dashboard illustrating how the layout adapts to smaller screens._
 
 ### Items - Desktop (User)
 
 ![Items Desktop Wireframe](<wireframes/07 Items – Desktop (User).png>)
 
-_Fig 17. Desktop wireframe for the items listing page displaying available items and navigation elements._
+_Fig 19. Desktop wireframe for the items listing page displaying available items and navigation elements._
 
 ### Items - Tablet & Mobile (User)
 
 ![Items Tablet and Mobile Wireframe](<wireframes/08 Items – Tablet & Mobile (User).png>)
 
-_Fig 18. Tablet and mobile wireframes for the items listing page demonstrating the responsive layout._
+_Fig 20. Tablet and mobile wireframes for the items listing page demonstrating the responsive layout._
 
 ### Item Details - Desktop (User)
 
 ![Item Details Desktop Wireframe](<wireframes/09 Item Details – Desktop (User).png>)
 
-_Fig 19. Desktop wireframe for the item details page showing item information, availability, and interaction options._
+_Fig 21. Desktop wireframe for the item details page showing item information, availability, and interaction options._
 
 ### Item Details - Tablet & Mobile (User)
 
 ![Item Details Tablet and Mobile Wireframe](<wireframes/10 Item Details – Tablet & Mobile (User).png>)
 
-_Fig 20. Tablet and mobile wireframes for the item details page demonstrating the responsive layout._
+_Fig 22. Tablet and mobile wireframes for the item details page demonstrating the responsive layout._
 
 ### Contracts - Desktop (User)
 
 ![Contracts Desktop Wireframe](<wireframes/11 Contracts – Desktop (User).png>)
 
-_Fig 21. Desktop wireframe for the contracts page displaying available contracts and interaction elements._
+_Fig 23. Desktop wireframe for the contracts page displaying available contracts and interaction elements._
 
 ### Contracts - Tablet & Mobile (User)
 
 ![Contracts Tablet and Mobile Wireframe](<wireframes/12 Contracts – Tablet & Mobile (User).png>)
 
-_Fig 22. Tablet and mobile wireframes for the contracts page demonstrating the responsive layout._
+_Fig 24. Tablet and mobile wireframes for the contracts page demonstrating the responsive layout._
 
 ### Contract Details - Desktop (User)
 
 ![Contract Details Desktop Wireframe](<wireframes/13 Contract Details – Desktop (User).png>)
 
-_Fig 23. Desktop wireframe for the contract details page showing contract information and interaction options._
+_Fig 25. Desktop wireframe for the contract details page showing contract information and interaction options._
 
 ### Contract Details - Tablet & Mobile (User)
 
 ![Contract Details Tablet and Mobile Wireframe](<wireframes/14 Contract Details – Tablet & Mobile (User).png>)
 
-_Fig 24. Tablet and mobile wireframes for the contract details page demonstrating the responsive layout._
+_Fig 26. Tablet and mobile wireframes for the contract details page demonstrating the responsive layout._
 
 ### Watchlist - Desktop (User)
 
 ![Watchlist Desktop Wireframe](<wireframes/15 Watchlist – Desktop (User).png>)
 
-_Fig 25. Desktop wireframe for the watchlist page displaying monitored items and contracts._
+_Fig 27. Desktop wireframe for the watchlist page displaying monitored items and contracts._
 
 ### Watchlist - Tablet & Mobile (User)
 
 ![Watchlist Tablet and Mobile Wireframe](<wireframes/16 Watchlist – Tablet & Mobile (User).png>)
 
-_Fig 26. Tablet and mobile wireframes for the watchlist page demonstrating the responsive layout._
+_Fig 28. Tablet and mobile wireframes for the watchlist page demonstrating the responsive layout._
 
 ### Notifications - Desktop (User)
 
 ![Notifications Desktop Wireframe](<wireframes/19 Notifications – Desktop (User).png>)
 
-_Fig 27. Desktop wireframe for the notifications interface showing alerts related to watched items and contracts._
+_Fig 29. Desktop wireframe for the notifications interface showing alerts related to watched items and contracts._
 
 ### Notifications - Tablet & Mobile (User)
 
 ![Notifications Tablet and Mobile Wireframe](<wireframes/20 Notifications – Tablet & Mobile (User).png>)
 
-_Fig 28. Tablet and mobile wireframes for the notifications interface demonstrating the responsive layout._
+_Fig 30. Tablet and mobile wireframes for the notifications interface demonstrating the responsive layout._
 
 ### Dashboard - Desktop (Admin)
 
 ![Dashboard Desktop Wireframe](<wireframes/21 Dashboard – Desktop (Admin).png>)
 
-_Fig 29. Desktop wireframe for the admin dashboard showing navigation, system overview metrics, and administrative management sections._
+_Fig 31. Desktop wireframe for the admin dashboard showing navigation, system overview metrics, and administrative management sections._
 
 ### Dashboard - Tablet & Mobile (Admin)
 
 ![Dashboard Tablet and Mobile Wireframe](<wireframes/22 Dashboard – Tablet & Mobile (Admin).png>)
 
-_Fig 30. Tablet and mobile wireframes for the admin dashboard illustrating how the layout adapts to smaller screens._
+_Fig 32. Tablet and mobile wireframes for the admin dashboard illustrating how the layout adapts to smaller screens._
 
 ## 9. Conclusion
 
@@ -437,7 +449,7 @@ Testing strategies, validation rules, and security considerations will also need
 1. MVC Image from [https://edstem.org/au/courses/25180/lessons/84072/slides/573930]
 2. Atlassian. (2023). Agile project management. Available at: https://www.atlassian.com/agile
 3. MDN Web Docs. (2023). Client–server overview. Available at: https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview
-4.MongoDB. (2023). MongoDB Data Model and Architecture. Available at: https://www.mongodb.com/docs
+4. MongoDB. (2023). MongoDB Data Model and Architecture. Available at: https://www.mongodb.com/docs
 5. MDN Web Docs. (2023). Form validation and server-side validation. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 6. MDN Web Docs. (2023). Password security. https://developer.mozilla.org/en-US/docs/Web/Security
 7. ACM.(2018). ACM Code of Ethics and Professional Conduct. Available at: https://www.acm.org/code-of-ethics

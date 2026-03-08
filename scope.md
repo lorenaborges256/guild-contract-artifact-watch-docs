@@ -53,10 +53,10 @@ The system models two different availability behaviours:
 #### Guild Contracts – Time-Based
 
 - Admin sets `start_at`, `end_at`, and `max_acceptances`
-- A quest is available only within the time window and while acceptances remain
-- Users can accept a quest while it’s available
+- A contract is available only within the time window and while acceptances remain
+- Users can accept a contract while it’s available
 - Accepting generates directions/instructions to present to the guild on completion to collect the reward
-- Users can watch unavailable contracts and get notified when the quest opens
+- Users can watch unavailable contracts and get notified when the contract opens
 
 ##### Reward scope
 
@@ -69,7 +69,7 @@ The system models two different availability behaviours:
 - Users can watch unavailable items and contracts
 - Notifications are triggered when:
   - Item becomes available (stock changes from 0 → >0)
-  - Quest becomes available (time window starts and max_acceptances are not reached)
+  - Contract becomes available (time window starts and max_acceptances are not reached)
 - Users can view and manage their watched items/contracts and notifications
 
 ---
@@ -88,11 +88,11 @@ The system models two different availability behaviours:
 
 - User
 - Item
-- Quest
-- Watch
-- Notification
-- QuestAcceptance
+- Contract
 - Reservation
+- ContractAcceptance
+- Watchlist
+- Notification
 
 ---
 

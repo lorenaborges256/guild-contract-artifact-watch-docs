@@ -1,1 +1,0 @@
-# guild-contract-artifact-watch-docs
