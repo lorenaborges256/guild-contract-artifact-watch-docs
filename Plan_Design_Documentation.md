@@ -4,6 +4,8 @@
 
 ### Courtney Macgregor - Lorena Borges Amaral - Simona Chiapperino
 
+#### GitHub Repository: https://github.com/c-joss/Guild-Availability-Management-System-GAMS-Docs.git
+
 # MERN Project - Guild Availability Management System (GAMS)
 
 ## 1. Project Overview
