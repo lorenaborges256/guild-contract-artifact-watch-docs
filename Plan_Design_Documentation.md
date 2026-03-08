@@ -114,7 +114,7 @@ To organise daily work and track progress, the team used the Kanban methodology.
 
 The team developed the Guild Availability Management System (GAMS) using an Agile project management approach. Agile supported the project by encouraging iterative development, regular communication, and flexibility throughout the planning and design process. Rather than treating the project as a single fixed task, the team developed the work progressively and reviewed sections as the project moved forward.
 
-![Agile Development Cycle](agile_development_cycle.png)
+![Agile Development Cycle](img/agile_development_cycle.png)
 
 _Fig 5. Agile development cycle used during the GAMS project showing the stages of planning, development, review, and continuous._ improvement.
 
@@ -122,7 +122,7 @@ This approach helped the team respond to changing requirements and improve docum
 
 Agile also supported collaboration between team members. The team communicated regularly, shared progress updates, and clarified responsibilities while different parts of the assessment were being completed. It made it easier to keep the project aligned and ensure that all required components were being addressed.
 
-![Team Collaboration Workflow](team_collaboration_workflow.png)
+![Team Collaboration Workflow](img/team_collaboration_workflow.png)
 
 _Fig 6. Team collaboration workflow showing communication, task coordination, development updates, and team review during the Agile development process._
 
