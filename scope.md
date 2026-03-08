@@ -1,19 +1,19 @@
 # Guild Contract & Artifact Watch System
 
-## Scope (v1 – Draft for Alignment)
+## Scope (v2 – Draft for Alignment)
 
 ### Project Overview
 
-A dashboard-style availability and reservation system where users can create an account, browse artifacts (inventory-based items) and guild contracts (time-based quests), and interact with them based on their availability.
+A dashboard-style availability and reservation system where users can create an account, browse items (inventory-based items) and guild contracts (time-based quests), and interact with them based on their availability.
 
-Artifacts can be reserved while in stock, generating a reservation number for in-person payment and collection at the guild. Guild contracts (quests) can be accepted during their active window, providing users with instructions to present to the guild upon completion to collect their reward.
+Items can be reserved while in stock, generating a reservation number for in-person payment and collection at the guild. Guild contracts can be accepted during their active window, providing users with instructions to present to the guild upon completion to collect their reward.
 
-Users can watch unavailable artifacts or contracts and receive notifications when they become available.
+Users can watch unavailable items or contracts and receive notifications when they become available.
 
 The system models two different availability behaviours:
 
 - Items are inventory-based.
-- Quests are time-window based.
+- Contracts are time-window based.
 
 ---
 
@@ -34,7 +34,7 @@ The system models two different availability behaviours:
 
 ---
 
-#### Artifacts (Items) – Inventory-Based
+#### Items – Inventory-Based
 
 - Admin sets `stock_quantity`
 - Users can reserve `while stock_quantity > 0`
@@ -50,13 +50,13 @@ The system models two different availability behaviours:
 
 ---
 
-#### Guild Contracts (Quests) – Time-Based
+#### Guild Contracts – Time-Based
 
 - Admin sets `start_at`, `end_at`, and `max_acceptances`
 - A quest is available only within the time window and while acceptances remain
 - Users can accept a quest while it’s available
 - Accepting generates directions/instructions to present to the guild on completion to collect the reward
-- Users can watch unavailable quests and get notified when the quest opens
+- Users can watch unavailable contracts and get notified when the quest opens
 
 ##### Reward scope
 
@@ -66,19 +66,19 @@ The system models two different availability behaviours:
 
 #### Watch & Notification Behaviour
 
-- Users can watch unavailable items and quests
+- Users can watch unavailable items and contracts
 - Notifications are triggered when:
   - Item becomes available (stock changes from 0 → >0)
   - Quest becomes available (time window starts and max_acceptances are not reached)
-- Users can view and manage their watched items/quests and notifications
+- Users can view and manage their watched items/contracts and notifications
 
 ---
 
 #### Admin Capabilities
 
-- Create and edit items and quests
+- Create and edit items and contracts
 - Set stock quantities (items)
-- Set start/end time windows (quests)
+- Set start/end time windows (contracts)
 - Manage users
 - Trigger availability changes that generate notifications
 
