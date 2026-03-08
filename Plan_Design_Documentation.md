@@ -114,15 +114,23 @@ To organise daily work and track progress, the team used the Kanban methodology.
 
 The team developed the Guild Availability Management System (GAMS) using an Agile project management approach. Agile supported the project by encouraging iterative development, regular communication, and flexibility throughout the planning and design process. Rather than treating the project as a single fixed task, the team developed the work progressively and reviewed sections as the project moved forward.
 
+![Agile Development Cycle](agile_development_cycle.png)
+
+_Fig 5. Agile development cycle used during the GAMS project showing the stages of planning, development, review, and continuous._ improvement.
+
 This approach helped the team respond to changing requirements and improve documentation throughout development. As the team completed different sections, members could review the work, identify issues, and make adjustments before moving on to the next stage. It reduced the risk of leaving major problems until the end of the project.
 
 Agile also supported collaboration between team members. The team communicated regularly, shared progress updates, and clarified responsibilities while different parts of the assessment were being completed. It made it easier to keep the project aligned and ensure that all required components were being addressed.
+
+![Team Collaboration Workflow](team_collaboration_workflow.png)
+
+_Fig 6. Team collaboration workflow showing communication, task coordination, development updates, and team review during the Agile development process._
 
 Another advantage of Agile in this project was its focus on incremental progress. The team could complete one part of the assessment at a time, review it, and then continue building on that work. It was especially useful for a project that included different elements such as system explanations, diagrams, ethical principles, ERD design, and user stories.
 
 For example, the team worked on the client/server architecture section in several steps. A team member first wrote the explanation, then created the supporting diagrams, and finally the section was reviewed before being added to the final document.
 
-This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
+This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development².
 
 ### 3.2 Task management methodology: Kanban
 
