@@ -105,21 +105,17 @@ _Fig 4. MVC Applied in GAMS project Diagram, Image created by the team using dra
 
 ## 3. Development methodologies
 
-## Project Management Methodology
+### 3.1 Project management methodology: Agile
 
-The team developed the Guild Availability Management System (GAMS) using an Agile project management approach supported by a Kanban-style workflow. This approach allowed the team to divide the project into smaller tasks and progress through continuous planning, development, and review.
+The team developed the Guild Availability Management System (GAMS) using an Agile project management approach. Agile supported the project by encouraging iterative development, regular communication, and flexibility throughout the planning and design process. Rather than treating the project as a single fixed task, the team developed the work progressively and reviewed sections as the project moved forward.
 
-The team managed project tasks using Trello as a visual task management tool. The Trello board organised work into columns representing different stages of development, including "To Do", "In Progress", and "Completed". The team created tasks as Trello cards and moved them across the board as development progressed.
+This approach helped the team respond to changing requirements and improve documentation throughout development. As the team completed different sections, members could review the work, identify issues, and make adjustments before moving on to the next stage. It reduced the risk of leaving major problems until the end of the project.
 
-The board listed the main project activities, including documentation sections, system diagrams, and architecture design tasks. Team members selected cards, updated their progress as they worked on them, and moved them to the completed column once they finished the task. This structure helped the team clearly track responsibilities and ensure that all required sections of the project were completed.
+Agile also supported collaboration between team members. The team communicated regularly, shared progress updates, and clarified responsibilities while different parts of the assessment were being completed. It made it easier to keep the project aligned and ensure that all required components were being addressed.
 
-Each Trello card included a checklist of the smaller steps required to complete the task. Team members ticked each checklist item after completing the step, which helped track progress and ensured that all parts of the task were finished before moving the card to the completed column.
+Another advantage of Agile in this project was its focus on incremental progress. The team could complete one part of the assessment at a time, review it, and then continue building on that work. It was especially useful for a project that included different elements such as system explanations, diagrams, ethical principles, ERD design, and user stories.
 
-For example, the Trello card for the client/server architecture documentation: A team member selected the task, prepared the diagrams and explanations, and updated the checklist as each step was completed. After the team reviewed the section, the member moved the card from "In Progress" to "Completed".
-
-The team used GitHub for version control and collaborative development. We also worked on assigned tasks and committed the changes to the shared repository. GitHub allowed the team to track updates, review contributions, and integrate new features into the project without overwriting each other's work.
-
-The team communicated and coordinated project work through Discord. We used messaging channels and voice meetings to discuss development progress, ask questions, and share updates. Team members frequently posted progress updates on Discord to report completed tasks and coordinate the project's next steps.
+For example, the team worked on the client/server architecture section in several steps. A team member first wrote the explanation, then created the supporting diagrams, and finally the section was reviewed before being added to the final document.
 
 This workflow helped the team organise development tasks clearly, track project progress visually, and coordinate collaboration across the project. Kanban boards support task visualisation and workflow management in Agile software development (Atlassian, 2023).
 
