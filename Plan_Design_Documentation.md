@@ -298,113 +298,129 @@ Keeping a record of these actions helps developers or administrators understand 
 
 ## 8. Wireframe overview
 
+The wireframes used in this document can also be found in the [wireframes folder](wireframes/) of the repository.
+
+The user flow diagram can be found [here](<img/userflow (1).png>).
+
 ### Login - Desktop
 
-![Login Desktop Wireframe](wireframes/01%20Login%20-%20Desktop.png)
+![Login Desktop Wireframe](<wireframes/01 Login - Desktop.png>)
 
-_Fig 8. Desktop wireframe for the login page showing the layout of the login form and authentication interface._
+_Fig 11. Desktop wireframe for the login page showing the layout of the login form and authentication interface._
 
 ### Login - Tablet & Mobile
 
-![Login Tablet and Mobile Wireframe](wireframes/02%20Login%20-%20Tablet%20%26%20Mobile.png)
+![Login Tablet and Mobile Wireframe](<wireframes/02 Login - Tablet & Mobile.png>)
 
-_Fig 9. Tablet and mobile wireframes for the login page demonstrating the responsive layout for smaller screen sizes._
+_Fig 12. Tablet and mobile wireframes for the login page demonstrating the responsive layout for smaller screen sizes._
 
 ### Register - Desktop
 
-![Register Desktop Wireframe](wireframes/03%20Register%20-%20Desktop.png)
+![Register Desktop Wireframe](<wireframes/03 Register - Desktop.png>)
 
-_Fig 10. Desktop wireframe for the user registration page showing the form layout and account creation fields._
+_Fig 13. Desktop wireframe for the user registration page showing the form layout and account creation fields._
 
 ### Register - Tablet & Mobile
 
-![Register Tablet and Mobile Wireframe](wireframes/04%20Register%20-%20Tablet%20%26%20Mobile.png)
+![Register Tablet and Mobile Wireframe](<wireframes/04 Register - Tablet & Mobile.png>)
 
-_Fig 11. Tablet and mobile wireframes for the user registration page demonstrating the responsive layout._
+_Fig 14. Tablet and mobile wireframes for the user registration page demonstrating the responsive layout._
 
 ### Dashboard - Desktop (User)
 
-![Dashboard Desktop Wireframe](<wireframes/05%20Dashboard%20%E2%80%93%20Desktop%20(User).png>)
+![Dashboard Desktop Wireframe](<wireframes/05 Dashboard – Desktop (User).png>)
 
-_Fig 12. Desktop wireframe for the user dashboard showing navigation, overview information, and key interaction areas._
+_Fig 15. Desktop wireframe for the user dashboard showing navigation, overview information, and key interaction areas._
 
 ### Dashboard - Tablet & Mobile (User)
 
-![Dashboard Tablet and Mobile Wireframe](<wireframes/06%20Dashboard%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Dashboard Tablet and Mobile Wireframe](<wireframes/06 Dashboard – Tablet & Mobile (User).png>)
 
-_Fig 13. Tablet and mobile wireframes for the user dashboard illustrating how the layout adapts to smaller screens._
+_Fig 16. Tablet and mobile wireframes for the user dashboard illustrating how the layout adapts to smaller screens._
 
 ### Items - Desktop (User)
 
-![Items Desktop Wireframe](<wireframes/07%20Items%20%E2%80%93%20Desktop%20(User).png>)
+![Items Desktop Wireframe](<wireframes/07 Items – Desktop (User).png>)
 
-_Fig 14. Desktop wireframe for the items listing page displaying available items and navigation elements._
+_Fig 17. Desktop wireframe for the items listing page displaying available items and navigation elements._
 
 ### Items - Tablet & Mobile (User)
 
-![Items Tablet and Mobile Wireframe](<wireframes/08%20Items%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Items Tablet and Mobile Wireframe](<wireframes/08 Items – Tablet & Mobile (User).png>)
 
-_Fig 15. Tablet and mobile wireframes for the items listing page demonstrating the responsive layout._
+_Fig 18. Tablet and mobile wireframes for the items listing page demonstrating the responsive layout._
 
 ### Item Details - Desktop (User)
 
-![Item Details Desktop Wireframe](<wireframes/09%20Item%20Details%20%E2%80%93%20Desktop%20(User).png>)
+![Item Details Desktop Wireframe](<wireframes/09 Item Details – Desktop (User).png>)
 
-_Fig 16. Desktop wireframe for the item details page showing item information, availability, and interaction options._
+_Fig 19. Desktop wireframe for the item details page showing item information, availability, and interaction options._
 
 ### Item Details - Tablet & Mobile (User)
 
-![Item Details Tablet and Mobile Wireframe](<wireframes/10%20Item%20Details%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Item Details Tablet and Mobile Wireframe](<wireframes/10 Item Details – Tablet & Mobile (User).png>)
 
-_Fig 17. Tablet and mobile wireframes for the item details page demonstrating the responsive layout._
+_Fig 20. Tablet and mobile wireframes for the item details page demonstrating the responsive layout._
 
 ### Contracts - Desktop (User)
 
-![Contracts Desktop Wireframe](<wireframes/11%20Contracts%20%E2%80%93%20Desktop%20(User).png>)
+![Contracts Desktop Wireframe](<wireframes/11 Contracts – Desktop (User).png>)
 
-_Fig 18. Desktop wireframe for the contracts page displaying available contracts and interaction elements._
+_Fig 21. Desktop wireframe for the contracts page displaying available contracts and interaction elements._
 
 ### Contracts - Tablet & Mobile (User)
 
-![Contracts Tablet and Mobile Wireframe](<wireframes/12%20Contracts%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Contracts Tablet and Mobile Wireframe](<wireframes/12 Contracts – Tablet & Mobile (User).png>)
 
-_Fig 19. Tablet and mobile wireframes for the contracts page demonstrating the responsive layout._
+_Fig 22. Tablet and mobile wireframes for the contracts page demonstrating the responsive layout._
 
 ### Contract Details - Desktop (User)
 
-![Contract Details Desktop Wireframe](<wireframes/14%20Contract%20Details%20%E2%80%93%20Desktop%20(User).png>)
+![Contract Details Desktop Wireframe](<wireframes/13 Contract Details – Desktop (User).png>)
 
-_Fig 20. Desktop wireframe for the contract details page showing contract information and interaction options._
+_Fig 23. Desktop wireframe for the contract details page showing contract information and interaction options._
 
 ### Contract Details - Tablet & Mobile (User)
 
-![Contract Details Tablet and Mobile Wireframe](<wireframes/15%20Contract%20Details%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Contract Details Tablet and Mobile Wireframe](<wireframes/14 Contract Details – Tablet & Mobile (User).png>)
 
-_Fig 21. Tablet and mobile wireframes for the contract details page demonstrating the responsive layout._
+_Fig 24. Tablet and mobile wireframes for the contract details page demonstrating the responsive layout._
 
 ### Watchlist - Desktop (User)
 
-![Watchlist Desktop Wireframe](<wireframes/16%20Watchlist%20%E2%80%93%20Desktop%20(User).png>)
+![Watchlist Desktop Wireframe](<wireframes/15 Watchlist – Desktop (User).png>)
 
-_Fig 22. Desktop wireframe for the watchlist page displaying monitored items and contracts._
+_Fig 25. Desktop wireframe for the watchlist page displaying monitored items and contracts._
 
 ### Watchlist - Tablet & Mobile (User)
 
-![Watchlist Tablet and Mobile Wireframe](<wireframes/17%20Watchlist%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Watchlist Tablet and Mobile Wireframe](<wireframes/16 Watchlist – Tablet & Mobile (User).png>)
 
-_Fig 23. Tablet and mobile wireframes for the watchlist page demonstrating the responsive layout._
+_Fig 26. Tablet and mobile wireframes for the watchlist page demonstrating the responsive layout._
 
 ### Notifications - Desktop (User)
 
-![Notifications Desktop Wireframe](<wireframes/19%20Notifications%20%E2%80%93%20Desktop%20(User).png>)
+![Notifications Desktop Wireframe](<wireframes/19 Notifications – Desktop (User).png>)
 
-_Fig 24. Desktop wireframe for the notifications interface showing alerts related to watched items and contracts._
+_Fig 27. Desktop wireframe for the notifications interface showing alerts related to watched items and contracts._
 
 ### Notifications - Tablet & Mobile (User)
 
-![Notifications Tablet and Mobile Wireframe](<wireframes/20%20Notifications%20%E2%80%93%20Tablet%20%26%20Mobile%20(User).png>)
+![Notifications Tablet and Mobile Wireframe](<wireframes/20 Notifications – Tablet & Mobile (User).png>)
 
-_Fig 25. Tablet and mobile wireframes for the notifications interface demonstrating the responsive layout._
+_Fig 28. Tablet and mobile wireframes for the notifications interface demonstrating the responsive layout._
+
+### Dashboard - Desktop (Admin)
+
+![Dashboard Desktop Wireframe](<wireframes/21 Dashboard – Desktop (Admin).png>)
+
+_Fig 29. Desktop wireframe for the admin dashboard showing navigation, system overview metrics, and administrative management sections._
+
+### Dashboard - Tablet & Mobile (Admin)
+
+![Dashboard Tablet and Mobile Wireframe](<wireframes/22 Dashboard – Tablet & Mobile (Admin).png>)
+
+_Fig 30. Tablet and mobile wireframes for the admin dashboard illustrating how the layout adapts to smaller screens._
 
 ## 9. Conclusion
 
