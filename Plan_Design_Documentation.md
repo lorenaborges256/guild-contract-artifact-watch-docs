@@ -2,7 +2,7 @@
 
 ## DEV1003 - Advanced Applications - Assessment 1
 
-### Courtney - Lorena Borges Amaral - Simona Chiapperino
+### Courtney Macgregor - Lorena Borges Amaral - Simona Chiapperino
 
 # MERN Project - Guild Availability Management System (GAMS)
 
